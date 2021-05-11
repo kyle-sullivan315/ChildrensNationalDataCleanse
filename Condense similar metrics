@@ -1,0 +1,67 @@
+Sub condense_Metric()
+
+    RowCount = 1
+    With Worksheets("All Disorders Test 2").Range("BB1")
+        Do Until .Offset(RowCount, 0).Value = ""
+            If UCase(.Offset(RowCount, 0).Value) = 1 Then
+                .Offset(RowCount, 8).Value = 1
+            End If
+            RowCount = RowCount + 1
+        Loop
+    End With
+
+    RowCount = 1
+    With Worksheets("All Disorders Test 2").Range("BK1")
+        Do Until .Offset(RowCount, 0).Value = ""
+            If UCase(.Offset(RowCount, 0).Value) = 1 Then
+                .Offset(RowCount, -1).Value = 1
+            End If
+            RowCount = RowCount + 1
+        Loop
+    End With
+    
+    RowCount = 1
+    With Worksheets("All Disorders Test 2").Range("BL1")
+        Do Until .Offset(RowCount, 0).Value = ""
+            If UCase(.Offset(RowCount, 0).Value) = 1 Then
+                .Offset(RowCount, -2).Value = 1
+            End If
+            RowCount = RowCount + 1
+        Loop
+    End With
+    
+    RowCount = 1
+    With Worksheets("All Disorders Test 2").Range("BM1")
+        Do Until .Offset(RowCount, 0).Value = ""
+            If UCase(.Offset(RowCount, 0).Value) = 1 Then
+                .Offset(RowCount, -3).Value = 1
+            End If
+            RowCount = RowCount + 1
+        Loop
+    End With
+    
+    RowCount = 1
+    With Worksheets("All Disorders Test 2").Range("BN1")
+        Do Until .Offset(RowCount, 0).Value = ""
+            If UCase(.Offset(RowCount, 0).Value) = 1 Then
+                .Offset(RowCount, -4).Value = 1
+            End If
+            RowCount = RowCount + 1
+        Loop
+    End With
+    
+    RowCount = 1
+    With Worksheets("All Disorders Test 2").Range("BO1")
+        Do Until .Offset(RowCount, 0).Value = ""
+            If UCase(.Offset(RowCount, 0).Value) = 1 Then
+                .Offset(RowCount, -5).Value = 1
+            End If
+            RowCount = RowCount + 1
+        Loop
+    End With
+
+    
+    Worksheets("All Disorders Test 2").Range("BK1:BO630").Delete Shift:=xlToLeft
+    Worksheets("All Disorders Test 2").Range("BJ1").Value = "MetricYN"
+    
+End Sub
